@@ -1,0 +1,21 @@
+
+Explain the Z-index :- 
+
+z-index is a CSS (Cascading Style Sheets) property that is used to control the stacking order of elements in a web page, particularly elements that overlap each other in the z-axis or "depth" of the page. It determines which elements appear in front of or behind other elements when they overlap in a web page's layout. The element with a higher z-index value appears on top of elements with lower values.
+
+Here are some key points to understand about z-index:
+
+Stacking Context: Each HTML element creates a stacking context. Elements within the same stacking context are stacked relative to each other based on their z-index values. Elements in different stacking contexts are stacked independently.
+
+Default Value: By default, most elements have a z-index value of "auto," which means they follow the stacking order of their parent elements. If no parent element has a specified z-index, elements are stacked in the order they appear in the HTML source.
+
+Numeric Values: You can assign numeric values (positive or negative integers) to the z-index property to control the stacking order explicitly. Higher values bring elements closer to the front, and lower values move them toward the back.
+
+Stacking Order Rules:
+
+Elements with a higher z-index value appear on top of elements with a lower value within the same stacking context.
+Sibling elements with the same parent are stacked according to their source order if their z-index values are equal or "auto."
+Elements in different stacking contexts are stacked independently and are unaffected by each other's z-index.
+Stacking Context Creation: Several factors can create a new stacking context, such as elements with position: absolute, position: relative, position: fixed, opacity less than 1, and certain CSS properties like transform and will-change. These elements and their children are stacked separately from the rest of the page.
+
+Stacking Context Hierarchy: Elements within a stacking context are stacked based on their z-index values relative to each other, but the stacking context itself may have its own z-index, affecting its position within the overall stacking order.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between</title>
+    <style>
+        td{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Parameter</th>
+            <th>Absolute positiong</th>
+            <th>Relative positiong</th>
+        </tr>
+            <td>Reference Point</td>
+            <td> Positioned relative to the nearest positioned ancestor or the viewport if none exists.</td>
+            <td> Positioned relative to its normal position in the document flow.</td>
+        <tr>
+        </tr>
+        <tr>
+            <td>Impact on Document Flow</td>
+            <td>Takes the element out of the normal document flow, potentially causing overlapping with other elements.
+            </td>
+            <td>Does not affect the layout of other elements; nearby elements act as if the relative-positioned element were still in its original position.</td>
+        </tr>
+        <tr>
+            <td>Offset Properties</td>
+            <td>Uses top, right, bottom, and left properties to specify positioning offsets.</td>
+            <td> Also uses top, right, bottom, and left properties for offsets but adjusts the element's position relative to its normal place in the layout.</td>
+        </tr>
+        <tr>
+            <td>Relative to Ancestors</td>
+            <td>Can be positioned relative to any positioned ancestor up the ancestor chain.</td>
+            <td>Positioned relative to itself, with offsets applied to its original position.</td>
+        </tr>
+        <tr>
+            <td>Scroll Behavior</td>
+            <td> Remains fixed relative to the viewport, even when the page is scrolled (unless the ancestor is a scrollable container with a fixed height).</td>
+            <td>Moves along with its containing element if the container is scrolled.</td>
+        </tr>
+        <tr>
+            <td>Z-Index</td>
+            <td>Often used with the z-index property to control stacking order and layering of elements.</td>
+            <td>Also can use z-index, but its impact is generally less significant since it doesn't remove the element from the document flow.</td>
+        </tr>
+    </table>
+</body>
+</html>
